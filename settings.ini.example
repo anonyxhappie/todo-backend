@@ -1,0 +1,11 @@
+[settings]
+DEBUG=False
+SECRET_KEY=SECRET_KEY
+ALLOWED_HOSTS=localhost,127.0.0.1
+DATABASE_ENGINE=django.db.backends.sqlite3
+DATEBASE_NAME=/todo/db.sqlite3
+TIME_ZONE=Asia/Kolkata
+LOG_FILE=/tmp/todofiles/todo_project_debug.log
+ADMIN_USERNAME=admin
+ADMIN_EMAIL=admin@xyz.com
+ADMIN_PASSWORD=admin
