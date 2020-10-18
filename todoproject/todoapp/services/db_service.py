@@ -108,7 +108,7 @@ class DatabaseController:
             ERROR_CODE = 'DATABASE_READ_ERROR'
             bucket_obj = Bucket.objects.filter(Q(uuid=bucket_uuid) & Q(is_deleted=False))
             self.logger.info('Bucket retrieved from DB')
-            if len(bucket_obj) < 0:
+            if len(bucket_obj) < 1:
                 ERROR_CODE = 'INVALID_BUCKET_ID'
                 raise Exception    
             all_todo_items = TodoItem.objects.filter(Q(bucket=bucket_obj[0]) & Q(is_deleted=False)).order_by('-updated_at')
